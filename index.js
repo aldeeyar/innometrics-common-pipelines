@@ -66,12 +66,12 @@ async function main() {
 
         console.log("LINKS FOR BACKEND PIPELINES:")
         console.log("----------------------------")
-        getWorkflows(octo_back, backend_owner, backend_repos, backend_workflow_filename)
+        await getWorkflows(octo_back, backend_owner, backend_repos, backend_workflow_filename)
         console.log()
 
         console.log("LINKS FOR FRONTEND PIPELINES:")
         console.log("----------------------------")
-        getWorkflows(octo_front, frontend_owner, frontend_repos, frontend_workflow_filename)
+        await getWorkflows(octo_front, frontend_owner, frontend_repos, frontend_workflow_filename)
 
 
     } catch (error) {
