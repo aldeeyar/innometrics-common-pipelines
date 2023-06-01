@@ -34,8 +34,10 @@ async function getWorkflows(octo, owner, repos, filename) {
 
 async function main() {
     try {
-        const backend_repos = core.getInput('backend_repos');
-        const frontend_repos = core.getInput('frontend_repos');
+        const backend_repos_raw = core.getInput('backend_repos');
+        const frontend_repos_raw = core.getInput('frontend_repos');
+        const backend_repos = backend_repos_raw.split('\n')
+        const frontend_repos = frontend_repos_raw.split('\n')
         const backend_token = core.getInput('backend_token');
         const frontend_token = core.getInput('frontend_token');
         const backend_owner = core.getInput('backend_owner')
