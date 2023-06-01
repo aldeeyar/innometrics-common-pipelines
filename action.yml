@@ -1,0 +1,21 @@
+name: 'innometrics-pipelines'
+description: 'Triggers dispatch from different repos'
+inputs:
+  repos:  # id of input
+    description: 'Repositories where to trigger'
+    required: true
+    default: []
+  token:
+    description: 'Github token for workflow dispatch'
+    requires: true
+    default: ''
+  dipatch_type:
+    description: 'Type of the dispatch to trigger'
+    requires: true
+    default: ''
+outputs:
+  workflow_urls: # id of output
+    description: 'Urls for workflows that are triggered'
+runs:
+  using: 'node16'
+  main: 'index.js'
