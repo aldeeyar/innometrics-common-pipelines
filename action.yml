@@ -4,11 +4,11 @@ inputs:
   backend_repos:
     description: ''
     required: true
-    default: []
+    default: ''
   frontend_repos:
     description: ''
     required: true
-    default: []
+    default: ''
   backend_token:
     description: ''
     required: true
