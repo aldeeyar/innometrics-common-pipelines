@@ -44,7 +44,7 @@ async function main() {
         const frontend_owner = core.getInput('frontend_owner')
         const backend_workflow_filename = core.getInput('backend_workflow_filename')
         const frontend_workflow_filename = core.getInput('frontend_workflow_filename')
-        const event_type = core.getInput('dispatch_type');
+        const event_type = core.getInput('event_type');
 
         const octo_back = new Octokit({
             auth: backend_token
