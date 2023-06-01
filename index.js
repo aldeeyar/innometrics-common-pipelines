@@ -27,7 +27,7 @@ async function get_workflow(octo, owner, repo, filename) {
 async function getWorkflows(octo, owner, repos, filename) {
     for (let i = 0; i < repos.length; i++) {
         console.log(`Link for ${repos[i]} pipeline:`)
-        console.log("> " + await get_workflow(octo, owner, repo[i], filename))
+        console.log("> " + await get_workflow(octo, owner, repos[i], filename))
         console.log()
     }
 }
