@@ -1,17 +1,41 @@
 name: 'innometrics-pipelines'
 description: 'Triggers dispatch from different repos'
 inputs:
-  repos:  # id of input
-    description: 'Repositories where to trigger'
+  backend_repos:
+    description: ''
     required: true
     default: []
-  token:
-    description: 'Github token for workflow dispatch'
-    requires: true
+  frontend_repos:
+    description: ''
+    required: true
+    default: []
+  backend_token:
+    description: ''
+    required: true
     default: ''
-  dipatch_type:
-    description: 'Type of the dispatch to trigger'
-    requires: true
+  frontend_token:
+    description: ''
+    required: true
+    default: ''
+  backend_owner:
+    description: ''
+    required: true
+    default: ''
+  frontend_owner:
+    description: ''
+    required: true
+    default: ''
+  backend_workflow_filename:
+    description: ''
+    required: true
+    default: ''
+  frontend_workflow_filename:
+    description: ''
+    required: true
+    default: ''
+  event_type:
+    description: ''
+    required: true
     default: ''
 outputs:
   workflow_urls: # id of output
